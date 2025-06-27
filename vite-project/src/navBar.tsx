@@ -4,11 +4,12 @@ type NavBarProps = {
    tituloPagina: string;
    item1: string;
    item2: string;
-   item3: string; 
+   item3: string;
+   carrito?: number;
 }
 
 function ComponentNavBar(props: NavBarProps){
-    const {tituloPagina , item1 ,item2, item3} = props;
+    const {tituloPagina , item1 ,item2, item3, carrito=0} = props;
     return (
     <div className={styles.NavBarHeader}>
     <h1 className={styles.titlePagestyle}>{tituloPagina}</h1>
@@ -17,6 +18,7 @@ function ComponentNavBar(props: NavBarProps){
         <li className={styles.itemsStyle}>{item1}</li>
         <li className={styles.itemsStyle}>{item2}</li>
         <li className={styles.itemsStyle}>{item3}</li>
+        <li className={styles.itemsStyle}>Carrito: {carrito}</li>
     </ul>
     </div>
             </div>
