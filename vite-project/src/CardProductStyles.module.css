@@ -1,3 +1,12 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    display:block;
+    width: 100%;
+}
+
 .tituloProducto {
     color: red;
 }
@@ -19,7 +28,10 @@
 }
 
 .tituloSection {
-    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 16px;
 }
 
 .cardProductContainer{
@@ -55,19 +67,82 @@ border-top-left-radius: 8px;
 
 .NavBarHeader {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2937;
+    padding: 12px 24px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .navBarstyle {
     display: flex;
-    gap: 8px;
-    margin-right: 0%;
+    gap: 16px;
 }
 
 
 
 .itemsStyle {
-     list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.itemsStyle:hover {
+    color: #60a5fa;
 }
 
 .titlePagestyle {
     text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+
+.filtrosContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    margin: 24px 0;
+}
+
+.checkboxItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #111827;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #60a5fa;
+}
+
+.inputBusqueda {
+    padding: 10px 14px;
+    font-size: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.inputBusqueda:focus {
+    outline: none;
+    border-color: #3b82f6;
 }

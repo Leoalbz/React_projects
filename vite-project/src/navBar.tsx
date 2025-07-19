@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import styles  from './CardProductStyles.module.css'
 
 type NavBarProps = {
@@ -8,7 +9,10 @@ type NavBarProps = {
    carrito?: number;
 }
 
+
+
 function ComponentNavBar(props: NavBarProps){
+    const handleClick = () => {};
     const {tituloPagina , item1 ,item2, item3, carrito=0} = props;
     return (
     <div className={styles.NavBarHeader}>
@@ -18,10 +22,11 @@ function ComponentNavBar(props: NavBarProps){
         <li className={styles.itemsStyle}>{item1}</li>
         <li className={styles.itemsStyle}>{item2}</li>
         <li className={styles.itemsStyle}>{item3}</li>
-        <li className={styles.itemsStyle}>Carrito: {carrito}</li>
+        <li className={styles.itemsStyle}>Carrito: {carrito}</li>  
+        <Link to={'/carrito'} onClick={handleClick} state={carrito}>Ir al carrito</Link>
     </ul>
     </div>
-            </div>
+    </div>
     )
 }
 

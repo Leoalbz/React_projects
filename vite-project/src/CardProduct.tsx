@@ -1,7 +1,8 @@
 import styles from './CardProductstyles.module.css'
-
+import {Link} from 'react-router';
 
 type CardProductProps = {
+    id: number;
     title : string;
     prize: number;
     src: string;
@@ -14,7 +15,7 @@ type CardProductProps = {
 
 
 function CardProduct (props: CardProductProps){
-    const { title, prize, src, description, agregarCarrito, quitarCarrito } = props;
+    const { id, title, prize, src, description, agregarCarrito, quitarCarrito } = props;
 
 
 
@@ -26,6 +27,7 @@ function CardProduct (props: CardProductProps){
                 <h3 className={styles.prizeProducto}>{prize}</h3>
                 <p>{description}</p>
                 <button className={styles.comprarProducto} onClick={() => agregarCarrito(prize)}>Agregar</button><button onClick={() => quitarCarrito(prize)}>Quitar</button>
+                <Link to={`/producto/${id}`}>Ver producto</Link>            
             </div>
         </article>
     );

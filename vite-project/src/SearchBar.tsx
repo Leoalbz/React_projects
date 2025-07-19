@@ -5,6 +5,7 @@ type SearchProps = {
 
 export default function SearchBar({ query, setSearchParams }: SearchProps) {
   return (
+    <div className="filtrosContainer">
     <form>
       <label htmlFor="searchByName">Buscar: </label>
       <input
@@ -12,7 +13,9 @@ export default function SearchBar({ query, setSearchParams }: SearchProps) {
         name="searchByName"
         value={query}
         onChange={(e) => setSearchParams({ title: e.target.value })}
+        className="inputBusqueda"
       />
     </form>
+    </div>
   );
 }

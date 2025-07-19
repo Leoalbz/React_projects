@@ -20,7 +20,7 @@ export default function CheckBox({ categoriasElegidas, setSearchParams }: CheckB
   };
 
   return (
-    <div>
+    <div className="checkboxItem">
       <h4>Filtrar por categoría:</h4>
       {categorias.map((categoria) => (
         <label key={categoria}>
